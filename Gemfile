@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 
 # agregar gema 
 gem 'bootstrap'
+gem 'devise', git: 'git://github.com/plataformatec/devise.git'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

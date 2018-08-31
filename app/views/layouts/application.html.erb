@@ -10,7 +10,39 @@
 
   <body>
     <div class="container"> 
+
+    <ul class="nav justify-content-end">
+    
+    <%- if user_signed_in? %> <%# validamos si hay usuario registrado%>
+    
+    <li class="nav-item">
+    
+    <%= link_to 'Salir', destroy_user_session_path, method: :delete %>
+    
+    </li>
+    
+    <% else %> <%# si no lo esta mostramos los botones de inicio y registro%>
+    
+    <li class="nav-item">
+    
+    <%= link_to 'Iniciar Sesión', new_user_session_path %>
+    
+    </li>
+    
+    <li class="nav-item">
+    
+    <%= link_to 'Registrar', new_user_registration_path %>
+    
+    </li>
+    
+    <% end %>
+    
+    </ul>
+
       <%= yield %>
+      <p class="notice"><%= notice %></p>
+      
+      <p class="alert"><%= alert %></p>
     </div>
   </body>
 </html>
