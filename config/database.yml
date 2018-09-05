@@ -13,7 +13,7 @@ development:
   <<: *default
   database: development
   username: postgres
-  password: sala2
+  password: andap
   host: localhost 
 
 # Warning: The database defined as "test" will be erased and
@@ -23,7 +23,7 @@ test:
   <<: *default
   database: test
   username: postgres
-  password: sala2
+  password: andap
   host: localhost
 
 production:
